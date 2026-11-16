@@ -1,0 +1,39 @@
+{
+ "day": {
+  "date": "2026-11-16",
+  "runs": 1,
+  "sent": 17
+ },
+ "sources": {
+  "ashby": {
+   "alerted": false,
+   "fail_streak": 0,
+   "last_error": null,
+   "last_ok": "2026-11-16T16:06:20.999453+00:00"
+  },
+  "greenhouse": {
+   "alerted": false,
+   "fail_streak": 0,
+   "last_error": null,
+   "last_ok": "2026-11-16T16:06:20.999453+00:00"
+  },
+  "himalayas": {
+   "alerted": false,
+   "fail_streak": 0,
+   "last_error": null,
+   "last_ok": "2026-11-16T16:06:20.999453+00:00"
+  },
+  "lever": {
+   "alerted": false,
+   "fail_streak": 0,
+   "last_error": null,
+   "last_ok": "2026-11-16T16:06:20.999453+00:00"
+  },
+  "workday": {
+   "alerted": false,
+   "fail_streak": 0,
+   "last_error": null,
+   "last_ok": "2026-11-16T16:06:20.999453+00:00"
+  }
+ }
+}
