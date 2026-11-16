@@ -1,0 +1,300 @@
+{
+  "candidate": "Kaustubh Pawar: IIT Kanpur B.Tech 2022. ~3 years: Associate Product Manager at The Economic Times (WhatsApp channel growth, CleverTap, user research, email/push strategy) and Category Analyst at PhonePe (Recharge & Bill Pay categories, GMV/AOP planning, campaigns, CRM). SQL, Tableau, Excel, Google Analytics, CleverTap, Figma.",
+  "locations": {
+    "remote_ok": [
+      "india",
+      "apac",
+      "asia",
+      "worldwide",
+      "anywhere",
+      "global"
+    ],
+    "cities": {
+      "Bengaluru": [
+        "bengaluru",
+        "bangalore"
+      ],
+      "Mumbai": [
+        "mumbai",
+        "navi mumbai",
+        "thane"
+      ],
+      "Pune": [
+        "pune"
+      ],
+      "Delhi NCR": [
+        "gurugram",
+        "gurgaon",
+        "delhi",
+        "noida"
+      ],
+      "Hyderabad": [
+        "hyderabad"
+      ]
+    }
+  },
+  "title_include": [
+    "product manager",
+    "associate product manager",
+    "apm",
+    "product owner",
+    "product analyst",
+    "product operations",
+    "business analyst",
+    "category manager",
+    "category analyst",
+    "category lead",
+    "growth manager",
+    "growth analyst",
+    "growth",
+    "crm",
+    "lifecycle",
+    "retention",
+    "engagement manager",
+    "program manager",
+    "strategy",
+    "business operations",
+    "bizops",
+    "strategy & operations",
+    "strategy and operations",
+    "business manager",
+    "business development manager"
+  ],
+  "title_exclude": [
+    "senior director",
+    "director",
+    "vp",
+    "vice president",
+    "head",
+    "principal",
+    "group product",
+    "chief",
+    "intern",
+    "trainee",
+    "engineer",
+    "developer",
+    "architect",
+    "scientist",
+    "designer",
+    "sales executive",
+    "account executive",
+    "recruiter",
+    "talent",
+    "hr",
+    "legal",
+    "finance manager",
+    "accountant",
+    "audit",
+    "tax",
+    "collections",
+    "field",
+    "warehouse",
+    "store",
+    "customer support",
+    "senior manager",
+    "senior product manager",
+    "sr product manager",
+    "sr. product manager",
+    "senior pm",
+    "staff product",
+    "russian",
+    "german",
+    "french",
+    "spanish",
+    "japanese",
+    "portuguese",
+    "arabic",
+    "thailand",
+    "igaming",
+    "gaming",
+    "task creator",
+    "sme",
+    "regulatory",
+    "clinical",
+    "medical"
+  ],
+  "max_age_days": 10,
+  "max_alerts_per_run": 25,
+  "sources": {
+    "himalayas": {
+      "enabled": true,
+      "queries": [
+        "product manager",
+        "product analyst",
+        "business analyst",
+        "growth manager",
+        "category manager"
+      ]
+    },
+    "workday": {
+      "enabled": true,
+      "queries": [
+        "product manager",
+        "product analyst",
+        "business analyst",
+        "growth"
+      ],
+      "regions": [
+        "India"
+      ],
+      "companies": [
+        {
+          "name": "PayPal",
+          "host": "paypal.wd1",
+          "tenant": "paypal",
+          "site": "jobs"
+        },
+        {
+          "name": "Target",
+          "host": "target.wd5",
+          "tenant": "target",
+          "site": "targetcareers"
+        },
+        {
+          "name": "Adobe",
+          "host": "adobe.wd5",
+          "tenant": "adobe",
+          "site": "external_experienced"
+        },
+        {
+          "name": "Salesforce",
+          "host": "salesforce.wd12",
+          "tenant": "salesforce",
+          "site": "External_Career_Site"
+        },
+        {
+          "name": "Mastercard",
+          "host": "mastercard.wd1",
+          "tenant": "mastercard",
+          "site": "CorporateCareers"
+        },
+        {
+          "name": "Citi",
+          "host": "citi.wd5",
+          "tenant": "citi",
+          "site": "2"
+        },
+        {
+          "name": "Barclays",
+          "host": "barclays.wd3",
+          "tenant": "barclays",
+          "site": "External_Career_Site_Barclays"
+        },
+        {
+          "name": "Philips",
+          "host": "philips.wd3",
+          "tenant": "philips",
+          "site": "jobs-and-careers"
+        },
+        {
+          "name": "Nike",
+          "host": "nike.wd1",
+          "tenant": "nike",
+          "site": "nke"
+        },
+        {
+          "name": "NVIDIA",
+          "host": "nvidia.wd5",
+          "tenant": "nvidia",
+          "site": "NVIDIAExternalCareerSite"
+        },
+        {
+          "name": "Thomson Reuters",
+          "host": "thomsonreuters.wd5",
+          "tenant": "thomsonreuters",
+          "site": "External_Career_Site"
+        },
+        {
+          "name": "Wolters Kluwer",
+          "host": "wk.wd3",
+          "tenant": "wk",
+          "site": "External"
+        },
+        {
+          "name": "Workday",
+          "host": "workday.wd5",
+          "tenant": "workday",
+          "site": "Workday"
+        },
+        {
+          "name": "Zendesk",
+          "host": "zendesk.wd1",
+          "tenant": "zendesk",
+          "site": "zendesk"
+        },
+        {
+          "name": "Gartner",
+          "host": "gartner.wd5",
+          "tenant": "gartner",
+          "site": "EXT"
+        },
+        {
+          "name": "Lowe's",
+          "host": "lowes.wd5",
+          "tenant": "lowes",
+          "site": "LWS_External_CS"
+        },
+        {
+          "name": "Equifax",
+          "host": "equifax.wd5",
+          "tenant": "equifax",
+          "site": "External"
+        }
+      ]
+    },
+    "greenhouse": {
+      "enabled": true,
+      "boards": [
+        "razorpaysoftwareprivatelimited",
+        "glance",
+        "slice",
+        "clear",
+        "groww",
+        "inmobi",
+        "porter",
+        "bluestone"
+      ]
+    },
+    "lever": {
+      "enabled": true,
+      "companies": [
+        "paytm",
+        "meesho",
+        "cred",
+        "zeta",
+        "fampay",
+        "fi",
+        "porter",
+        "mindtickle",
+        "hevodata"
+      ]
+    },
+    "ashby": {
+      "enabled": true,
+      "boards": [
+        "navi",
+        "atlan"
+      ]
+    }
+  },
+  "company_names": {
+    "razorpaysoftwareprivatelimited": "Razorpay",
+    "glance": "Glance (InMobi)",
+    "slice": "slice",
+    "clear": "Clear (ClearTax)",
+    "groww": "Groww",
+    "inmobi": "InMobi",
+    "porter": "Porter",
+    "bluestone": "BlueStone",
+    "paytm": "Paytm",
+    "meesho": "Meesho",
+    "cred": "CRED",
+    "zeta": "Zeta",
+    "fampay": "FamPay",
+    "fi": "Fi Money",
+    "mindtickle": "Mindtickle",
+    "hevodata": "Hevo Data",
+    "navi": "Navi",
+    "atlan": "Atlan"
+  }
+}
