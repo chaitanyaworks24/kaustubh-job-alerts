@@ -1,39 +1,44 @@
 {
  "day": {
-  "date": "2026-11-17",
-  "runs": 3,
-  "sent": 4
+  "date": "2026-11-18",
+  "runs": 1,
+  "sent": 3
  },
  "sources": {
   "ashby": {
    "alerted": false,
    "fail_streak": 0,
    "last_error": null,
-   "last_ok": "2026-11-17T21:07:57.703241+00:00"
+   "last_ok": "2026-11-18T02:58:27.024302+00:00"
   },
   "greenhouse": {
    "alerted": false,
    "fail_streak": 0,
    "last_error": null,
-   "last_ok": "2026-11-17T21:07:57.703241+00:00"
+   "last_ok": "2026-11-18T02:58:27.024302+00:00"
   },
   "himalayas": {
    "alerted": false,
    "fail_streak": 0,
    "last_error": null,
-   "last_ok": "2026-11-17T21:07:57.703241+00:00"
+   "last_ok": "2026-11-18T02:58:27.024302+00:00"
   },
   "lever": {
    "alerted": false,
    "fail_streak": 0,
    "last_error": null,
-   "last_ok": "2026-11-17T21:07:57.703241+00:00"
+   "last_ok": "2026-11-18T02:58:27.024302+00:00"
   },
   "workday": {
    "alerted": false,
    "fail_streak": 0,
    "last_error": null,
-   "last_ok": "2026-11-17T21:07:57.703241+00:00"
+   "last_ok": "2026-11-18T02:58:27.024302+00:00"
+  },
+  "workday/Workday": {
+   "alerted": false,
+   "fail_streak": 1,
+   "last_error": "'title'"
   }
  }
 }
