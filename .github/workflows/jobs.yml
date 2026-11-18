@@ -2,7 +2,7 @@ name: Watch for jobs
 
 on:
   schedule:
-    - cron: "30 */3 * * *"   # every 3 hours, ~3 min/run = ~720 GitHub minutes/month (budget shared with other watchers)
+    - cron: "30 */3 * * *"   # every 3 hours (public repo, so Actions minutes are free)
   workflow_dispatch:
 
 permissions:
