@@ -16,7 +16,7 @@ Checks every 2 hours for **Product Manager / APM, Product Analyst, Business Anal
 
 ## Alerts
 
-Jobs go to Kaustubh's chat. Problem reports (daily check-in, ⚠️ source failures, 🚨 crashes) go to `TELEGRAM_ADMIN_CHAT_ID` (Chaitanya).
+Jobs go to Kaustubh's chat. After each check's jobs, one more message lists all their apply links as full URLs, one per line, ready to copy and forward (split into several messages if it's too long for one). Problem reports (daily check-in, ⚠️ source failures, 🚨 crashes) go to `TELEGRAM_ADMIN_CHAT_ID` (Chaitanya).
 
 ## Run locally
 
