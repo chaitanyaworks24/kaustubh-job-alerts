@@ -217,7 +217,7 @@ def fetch_jobspy(site):
             from jobspy import scrape_jobs
         except ImportError:
             raise RuntimeError("python-jobspy is not installed (needs Python 3.10+: pip install -r requirements.txt)")
-        jobs, failed = [], 0
+        jobs, failed = [], []
         for location in cfg["locations"]:
             for q in cfg["queries"]:
                 try:
@@ -226,8 +226,7 @@ def fetch_jobspy(site):
                                      hours_old=cfg.get("hours_old", 24), verbose=0)
                 except Exception as e:
                     log("%s %r in %s failed: %s" % (site, q, location, e))
-                    PARTIAL_ERRORS["%s/%s, %s" % (site, q, location)] = str(e)
-                    failed += 1
+                    failed.append("%s in %s: %s" % (q, location, e))
                     continue
                 for r in df.to_dict("records"):
                     r = {k: (None if v != v else v) for k, v in r.items()}  # pandas uses NaN for missing values
@@ -236,12 +235,15 @@ def fetch_jobspy(site):
                     if city.lower() != "india" and city.lower() not in place.lower():
                         place = "%s; %s" % (city, place)  # Indeed only gives the state ("KA, India")
                     if r.get("is_remote"):
-                        place = "Remote, India; " + place
+                        place = "Remote, India" + ("" if place.lower() in ("", "india") else "; " + place)
                     jobs.append(job(site, r.get("company"), r.get("id") or r.get("job_url"), r.get("title"),
                                     r.get("job_url"), place, parse_date(str(r["date_posted"])) if r.get("date_posted") else None))
                 time.sleep(cfg.get("delay_seconds", 3))
-        if failed == len(cfg["locations"]) * len(cfg["queries"]):
-            raise RuntimeError("every %s search failed" % site)
+        total = len(cfg["locations"]) * len(cfg["queries"])
+        if len(failed) == total:
+            raise RuntimeError("every %s search failed: %s" % (site, failed[0]))
+        if failed:  # one warning per site, not one per search
+            PARTIAL_ERRORS[site + "/searches"] = "%d of %d searches failed, e.g. %s" % (len(failed), total, failed[0])
         return jobs
     return fetch
 
