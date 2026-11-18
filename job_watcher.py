@@ -242,8 +242,8 @@ def fetch_jobspy(site):
         total = len(cfg["locations"]) * len(cfg["queries"])
         if len(failed) == total:
             raise RuntimeError("every %s search failed: %s" % (site, failed[0]))
-        if failed:  # one warning per site, not one per search
-            PARTIAL_ERRORS[site + "/searches"] = "%d of %d searches failed, e.g. %s" % (len(failed), total, failed[0])
+        if failed:  # LinkedIn often rate-limits a few searches from GitHub: only warn when they all fail (above)
+            log("%s: %d of %d searches failed" % (site, len(failed), total))
         return jobs
     return fetch
 
