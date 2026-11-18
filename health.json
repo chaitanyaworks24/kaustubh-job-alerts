@@ -1,44 +1,45 @@
 {
  "day": {
   "date": "2026-11-18",
-  "runs": 1,
-  "sent": 3
+  "runs": 2,
+  "sent": 7
  },
  "sources": {
   "ashby": {
    "alerted": false,
    "fail_streak": 0,
    "last_error": null,
-   "last_ok": "2026-11-18T02:58:27.024302+00:00"
+   "last_ok": "2026-11-18T11:58:11.508278+00:00"
   },
   "greenhouse": {
    "alerted": false,
    "fail_streak": 0,
    "last_error": null,
-   "last_ok": "2026-11-18T02:58:27.024302+00:00"
+   "last_ok": "2026-11-18T11:58:11.508278+00:00"
   },
   "himalayas": {
    "alerted": false,
    "fail_streak": 0,
    "last_error": null,
-   "last_ok": "2026-11-18T02:58:27.024302+00:00"
+   "last_ok": "2026-11-18T11:58:11.508278+00:00"
   },
   "lever": {
    "alerted": false,
    "fail_streak": 0,
    "last_error": null,
-   "last_ok": "2026-11-18T02:58:27.024302+00:00"
+   "last_ok": "2026-11-18T11:58:11.508278+00:00"
   },
   "workday": {
    "alerted": false,
    "fail_streak": 0,
    "last_error": null,
-   "last_ok": "2026-11-18T02:58:27.024302+00:00"
+   "last_ok": "2026-11-18T11:58:11.508278+00:00"
   },
   "workday/Workday": {
    "alerted": false,
-   "fail_streak": 1,
-   "last_error": "'title'"
+   "fail_streak": 0,
+   "last_error": null,
+   "last_ok": "2026-11-18T11:58:11.508278+00:00"
   }
  }
 }
