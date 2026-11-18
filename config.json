@@ -188,7 +188,8 @@
       ]
     },
     "glassdoor": {
-      "enabled": true,
+      "enabled": false,
+      "note": "blocks GitHub servers (403); works from a home connection",
       "hours_old": 24,
       "results_wanted": 30,
       "locations": [

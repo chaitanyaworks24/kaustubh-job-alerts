@@ -10,7 +10,7 @@ Checks every 3 hours for **Product Manager / APM, Product Analyst, Business Anal
 
 - **Indian startups:** Razorpay, Paytm, Meesho, CRED, Groww, Zeta, FamPay, Fi, slice, Clear, Porter, Glance, InMobi, BlueStone, Navi, Atlan, Mindtickle, Hevo Data
 - **Big companies' career portals in India (Workday):** PayPal, Target, Adobe, Salesforce, Mastercard, Citi, Barclays, Philips, Nike, NVIDIA, Thomson Reuters, Wolters Kluwer, Workday, Zendesk, Gartner, Lowe's, Equifax
-- **Job sites (via [JobSpy](https://github.com/speedyapply/JobSpy)):** LinkedIn, Naukri, Indeed and Glassdoor (logged out, jobs posted in the last 24 hours). The same job showing up on several sites is only sent once.
+- **Job sites (via [JobSpy](https://github.com/speedyapply/JobSpy)):** LinkedIn, Naukri and Indeed (logged out, jobs posted in the last 24 hours). Glassdoor is set up but off: it blocks GitHub's servers. The same job showing up on several sites is only sent once.
 - **Indian job boards:** iimjobs and Hirist (same backend; searched with a 10-second gap between requests, as their robots.txt asks). Hirist hides some of its newest jobs from logged-out visitors, so a few Hirist roles arrive a few days late.
 - **Remote:** Himalayas (jobs open to India)
 
