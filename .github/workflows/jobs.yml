@@ -2,7 +2,7 @@ name: Watch for jobs
 
 on:
   schedule:
-    - cron: "30 */3 * * *"   # every 3 hours (public repo, so Actions minutes are free)
+    - cron: "30 */2 * * *"   # every 2 hours (public repo, so Actions minutes are free)
   workflow_dispatch:
 
 permissions:

@@ -1,6 +1,6 @@
 # Kaustubh's Job Alerts
 
-Checks every 3 hours for **Product Manager / APM, Product Analyst, Business Analyst, Category, Growth/CRM and Business Operations** roles, and sends new ones to Telegram (@JobFindet_bot), newest first.
+Checks every 2 hours for **Product Manager / APM, Product Analyst, Business Analyst, Category, Growth/CRM and Business Operations** roles, and sends new ones to Telegram (@JobFindet_bot), newest first.
 
 **Locations:** Bengaluru, Mumbai, Pune, Delhi NCR, Hyderabad, and remote jobs open to India. Edit `locations` in `config.json` to change these.
 
