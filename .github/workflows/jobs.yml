@@ -2,7 +2,7 @@ name: Watch for jobs
 
 on:
   schedule:
-    - cron: "30 */3 * * *"   # every 3 hours = ~250 free GitHub minutes/month (budget shared with other watchers)
+    - cron: "30 */3 * * *"   # every 3 hours, ~3 min/run = ~720 GitHub minutes/month (budget shared with other watchers)
   workflow_dispatch:
 
 permissions:
@@ -26,6 +26,10 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+          cache: pip
+
+      - name: Install JobSpy (LinkedIn, Naukri, Indeed, Glassdoor)
+        run: pip install -r requirements.txt
 
       - name: Check career portals and send alerts
         run: python job_watcher.py

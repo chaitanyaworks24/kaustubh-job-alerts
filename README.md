@@ -10,6 +10,8 @@ Checks every 3 hours for **Product Manager / APM, Product Analyst, Business Anal
 
 - **Indian startups:** Razorpay, Paytm, Meesho, CRED, Groww, Zeta, FamPay, Fi, slice, Clear, Porter, Glance, InMobi, BlueStone, Navi, Atlan, Mindtickle, Hevo Data
 - **Big companies' career portals in India (Workday):** PayPal, Target, Adobe, Salesforce, Mastercard, Citi, Barclays, Philips, Nike, NVIDIA, Thomson Reuters, Wolters Kluwer, Workday, Zendesk, Gartner, Lowe's, Equifax
+- **Job sites (via [JobSpy](https://github.com/speedyapply/JobSpy)):** LinkedIn, Naukri, Indeed and Glassdoor (logged out, jobs posted in the last 24 hours). The same job showing up on several sites is only sent once.
+- **Indian job boards:** iimjobs and Hirist (same backend; searched with a 10-second gap between requests, as their robots.txt asks). Hirist hides some of its newest jobs from logged-out visitors, so a few Hirist roles arrive a few days late.
 - **Remote:** Himalayas (jobs open to India)
 
 ## Alerts
@@ -18,11 +20,14 @@ Jobs go to Kaustubh's chat. Problem reports (daily check-in, ⚠️ source failu
 
 ## Run locally
 
+Needs Python 3.10+ for the JobSpy sites:
+
 ```sh
+pip install -r requirements.txt
 python3 job_watcher.py --dry-run   # show matching jobs, send nothing
 python3 job_watcher.py             # send alerts
 ```
 
 ## Not covered automatically
 
-LinkedIn, Naukri, Instahyre, Cutshort, Wellfound, and most PM roles at Flipkart, Swiggy, Zomato and PhonePe (they use their own portals or block bots). Use those sites' email job alerts.
+Instahyre, Cutshort, Wellfound, and most PM roles at Flipkart, Swiggy, Zomato and PhonePe (they use their own portals or block bots). Use those sites' email job alerts.

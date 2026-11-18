@@ -114,8 +114,96 @@
     "medical"
   ],
   "max_age_days": 10,
-  "max_alerts_per_run": 25,
+  "max_alerts_per_run": 50,
   "sources": {
+    "iimjobs": {
+      "enabled": true,
+      "posted_within_days": 3,
+      "max_pages": 3,
+      "delay_seconds": 10,
+      "queries": [
+        "product manager",
+        "product analyst",
+        "business analyst",
+        "category manager",
+        "growth manager"
+      ]
+    },
+    "hirist": {
+      "enabled": true,
+      "posted_within_days": 15,
+      "max_pages": 2,
+      "delay_seconds": 10,
+      "queries": [
+        "product manager",
+        "product analyst",
+        "business analyst"
+      ]
+    },
+    "linkedin": {
+      "enabled": true,
+      "hours_old": 24,
+      "results_wanted": 50,
+      "locations": [
+        "India"
+      ],
+      "queries": [
+        "product manager",
+        "product analyst",
+        "business analyst",
+        "category manager",
+        "growth manager"
+      ]
+    },
+    "naukri": {
+      "enabled": true,
+      "hours_old": 24,
+      "results_wanted": 50,
+      "locations": [
+        "India"
+      ],
+      "queries": [
+        "product manager",
+        "product analyst",
+        "business analyst",
+        "category manager",
+        "growth manager"
+      ]
+    },
+    "indeed": {
+      "enabled": true,
+      "hours_old": 24,
+      "results_wanted": 30,
+      "locations": [
+        "Bengaluru",
+        "Mumbai",
+        "Pune",
+        "Gurugram",
+        "Hyderabad"
+      ],
+      "queries": [
+        "product manager",
+        "product analyst",
+        "business analyst"
+      ]
+    },
+    "glassdoor": {
+      "enabled": true,
+      "hours_old": 24,
+      "results_wanted": 30,
+      "locations": [
+        "Bengaluru",
+        "Mumbai",
+        "Pune",
+        "Gurugram",
+        "Hyderabad"
+      ],
+      "queries": [
+        "product manager",
+        "product analyst",
+        "business analyst"
+      ]
+    },
     "himalayas": {
       "enabled": true,
       "queries": [

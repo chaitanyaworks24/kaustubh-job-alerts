@@ -59,13 +59,14 @@ def log(msg):
     print(msg, file=sys.stderr)
 
 
-def http_get(url, body=None, retries=2):
+def http_get(url, body=None, retries=2, headers=None):
     last_err = None
     for attempt in range(retries + 1):
         try:
             req = urllib.request.Request(
                 url, data=json.dumps(body).encode() if body is not None else None,
-                headers={"User-Agent": USER_AGENT, "Accept": "application/json", "Content-Type": "application/json"})
+                headers={"User-Agent": USER_AGENT, "Accept": "application/json", "Content-Type": "application/json",
+                         **(headers or {})})
             with urllib.request.urlopen(req, timeout=30) as resp:
                 return resp.read()
         except Exception as e:
@@ -74,8 +75,8 @@ def http_get(url, body=None, retries=2):
     raise last_err
 
 
-def http_json(url, body=None, retries=2):
-    return json.loads(http_get(url, body, retries))
+def http_json(url, body=None, retries=2, headers=None):
+    return json.loads(http_get(url, body, retries, headers))
 
 
 def parse_date(value):
@@ -180,6 +181,79 @@ def fetch_weworkremotely(cfg, config, now):
     return jobs
 
 
+# ---------- Indian job boards ----------
+
+def fetch_gladiator(source, host, cfg):
+    """iimjobs and Hirist run on the same backend ("gladiator") with a JSON search API."""
+    jobs = []
+    for q in cfg["queries"]:
+        for page in range(1, cfg.get("max_pages", 3) + 1):
+            time.sleep(cfg.get("delay_seconds", 10))  # both sites ask for Crawl-delay: 10 in robots.txt
+            url = "https://%s/job/search?%s" % (host, urllib.parse.urlencode(
+                {"query": q, "page": page, "posting": cfg.get("posted_within_days", 3)}))
+            try:
+                data = http_json(url, headers={"version": "2"})
+            except Exception as e:
+                log("%s %r failed: %s" % (source, q, e))
+                PARTIAL_ERRORS["%s/%s" % (source, q)] = str(e)
+                break
+            for j in data.get("data", []):
+                location = "; ".join(l.get("name", "") for l in j.get("locations") or [])
+                if j.get("workFromHome"):
+                    location = "Remote, India; " + location
+                # jobdesignation is the title without the "Company - " prefix iimjobs adds
+                jobs.append(job(source, (j.get("companyData") or {}).get("companyName"), j["id"],
+                                j.get("jobdesignation") or j.get("title"), j.get("jobDetailUrl"), location,
+                                parse_date(j.get("createdTimeMs") or j.get("createdTime"))))
+            if not data.get("hasMore"):
+                break
+    return jobs
+
+
+def fetch_jobspy(site):
+    """LinkedIn, Naukri, Indeed and Glassdoor via the JobSpy library (pip install python-jobspy; Python 3.10+)."""
+    def fetch(cfg, config, now):
+        try:
+            from jobspy import scrape_jobs
+        except ImportError:
+            raise RuntimeError("python-jobspy is not installed (needs Python 3.10+: pip install -r requirements.txt)")
+        jobs, failed = [], 0
+        for location in cfg["locations"]:
+            for q in cfg["queries"]:
+                try:
+                    df = scrape_jobs(site_name=[site], search_term=q, location=location, country_indeed="india",
+                                     results_wanted=cfg.get("results_wanted", 30),
+                                     hours_old=cfg.get("hours_old", 24), verbose=0)
+                except Exception as e:
+                    log("%s %r in %s failed: %s" % (site, q, location, e))
+                    PARTIAL_ERRORS["%s/%s, %s" % (site, q, location)] = str(e)
+                    failed += 1
+                    continue
+                for r in df.to_dict("records"):
+                    r = {k: (None if v != v else v) for k, v in r.items()}  # pandas uses NaN for missing values
+                    place = str(r.get("location") or "")
+                    city = location.split(",")[0]
+                    if city.lower() != "india" and city.lower() not in place.lower():
+                        place = "%s; %s" % (city, place)  # Indeed only gives the state ("KA, India")
+                    if r.get("is_remote"):
+                        place = "Remote, India; " + place
+                    jobs.append(job(site, r.get("company"), r.get("id") or r.get("job_url"), r.get("title"),
+                                    r.get("job_url"), place, parse_date(str(r["date_posted"])) if r.get("date_posted") else None))
+                time.sleep(cfg.get("delay_seconds", 3))
+        if failed == len(cfg["locations"]) * len(cfg["queries"]):
+            raise RuntimeError("every %s search failed" % site)
+        return jobs
+    return fetch
+
+
+def fetch_iimjobs(cfg, config, now):
+    return fetch_gladiator("iimjobs", "gladiator.iimjobs.com", cfg)
+
+
+def fetch_hirist(cfg, config, now):
+    return fetch_gladiator("hirist", "gladiator.hirist.tech", cfg)
+
+
 # ---------- company career portals ----------
 
 def fetch_workday(cfg, config, now):
@@ -280,6 +354,12 @@ SOURCES = {
     "remotive": fetch_remotive,
     "remoteok": fetch_remoteok,
     "weworkremotely": fetch_weworkremotely,
+    "iimjobs": fetch_iimjobs,
+    "hirist": fetch_hirist,
+    "linkedin": fetch_jobspy("linkedin"),
+    "naukri": fetch_jobspy("naukri"),
+    "indeed": fetch_jobspy("indeed"),
+    "glassdoor": fetch_jobspy("glassdoor"),
     "workday": fetch_workday,
     "greenhouse": fetch_greenhouse,
     "lever": fetch_lever,
@@ -307,6 +387,15 @@ def location_label(j, config):
     return None
 
 
+def fingerprint(j):
+    """Same company + title = same job, whichever board it came from (LinkedIn, Naukri, Indeed... overlap a lot)."""
+    def norm(s):
+        return re.sub(r"[^a-z0-9]+", " ", (s or "").lower()).strip()
+    company = re.sub(r"\b(private|pvt|limited|ltd|inc|llp|technologies|india)\b", "",
+                     norm(COMPANY_NAMES.get(j["company"], j["company"])))
+    return "dup:%s|%s" % (" ".join(company.split()), norm(j["title"]))
+
+
 def filter_jobs(jobs, config):
     include = [term_pattern(t) for t in config["title_include"]]
     exclude = [term_pattern(t) for t in config["title_exclude"]]
@@ -319,7 +408,8 @@ def filter_jobs(jobs, config):
         if place is None:
             continue
         j["place"] = place
-        kept[j["key"]] = j  # dedupe: some sources return the same job for several queries
+        j["fp"] = fingerprint(j)
+        kept.setdefault(j["fp"], j)  # dedupe: same job from several queries or several boards
     return list(kept.values())
 
 
@@ -457,7 +547,8 @@ def run(dry_run):
             results[key] = None
 
     matched = filter_jobs(all_jobs, config)
-    fresh = [j for j in matched if j["key"] not in seen and (j["posted"] is None or now - j["posted"] <= max_age)]
+    fresh = [j for j in matched if j["key"] not in seen and j["fp"] not in seen
+             and (j["posted"] is None or now - j["posted"] <= max_age)]
     fresh.sort(key=lambda j: -(j["posted"] or now - max_age).timestamp())  # newest first
     log("%d matching roles, %d new" % (len(matched), len(fresh)))
 
@@ -488,7 +579,7 @@ def run(dry_run):
     if not dry_run:
         for j in to_send:  # unsent jobs (over the limit or failed to send) stay unseen, so they're retried next check
             if j["key"] not in failed_keys:
-                seen[j["key"]] = now.isoformat()
+                seen[j["key"]] = seen[j["fp"]] = now.isoformat()
         cutoff = (now - timedelta(days=SEEN_RETENTION_DAYS)).isoformat()
         with open(SEEN_PATH, "w") as f:
             json.dump({k: v for k, v in seen.items() if v >= cutoff}, f, indent=0, sort_keys=True)
