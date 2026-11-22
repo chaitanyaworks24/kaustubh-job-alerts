@@ -1,75 +1,75 @@
 {
  "day": {
   "date": "2026-11-22",
-  "runs": 2,
-  "sent": 37
+  "runs": 3,
+  "sent": 68
  },
  "sources": {
   "ashby": {
    "alerted": false,
    "fail_streak": 0,
    "last_error": null,
-   "last_ok": "2026-11-22T10:11:50.793932+00:00"
+   "last_ok": "2026-11-22T17:58:45.205247+00:00"
   },
   "greenhouse": {
    "alerted": false,
    "fail_streak": 0,
    "last_error": null,
-   "last_ok": "2026-11-22T10:11:50.793932+00:00"
+   "last_ok": "2026-11-22T17:58:45.205247+00:00"
   },
   "himalayas": {
    "alerted": false,
    "fail_streak": 0,
    "last_error": null,
-   "last_ok": "2026-11-22T10:11:50.793932+00:00"
+   "last_ok": "2026-11-22T17:58:45.205247+00:00"
   },
   "hirist": {
    "alerted": false,
    "fail_streak": 0,
    "last_error": null,
-   "last_ok": "2026-11-22T10:11:50.793932+00:00"
+   "last_ok": "2026-11-22T17:58:45.205247+00:00"
   },
   "iimjobs": {
    "alerted": false,
    "fail_streak": 0,
    "last_error": null,
-   "last_ok": "2026-11-22T10:11:50.793932+00:00"
+   "last_ok": "2026-11-22T17:58:45.205247+00:00"
   },
   "indeed": {
    "alerted": false,
    "fail_streak": 0,
    "last_error": null,
-   "last_ok": "2026-11-22T10:11:50.793932+00:00"
+   "last_ok": "2026-11-22T17:58:45.205247+00:00"
   },
   "lever": {
    "alerted": false,
    "fail_streak": 0,
    "last_error": null,
-   "last_ok": "2026-11-22T10:11:50.793932+00:00"
+   "last_ok": "2026-11-22T17:58:45.205247+00:00"
   },
   "linkedin": {
    "alerted": false,
    "fail_streak": 0,
    "last_error": null,
-   "last_ok": "2026-11-22T10:11:50.793932+00:00"
+   "last_ok": "2026-11-22T17:58:45.205247+00:00"
   },
   "naukri": {
    "alerted": false,
    "fail_streak": 0,
    "last_error": null,
-   "last_ok": "2026-11-22T10:11:50.793932+00:00"
+   "last_ok": "2026-11-22T17:58:45.205247+00:00"
   },
   "workday": {
    "alerted": false,
    "fail_streak": 0,
    "last_error": null,
-   "last_ok": "2026-11-22T10:11:50.793932+00:00"
+   "last_ok": "2026-11-22T17:58:45.205247+00:00"
   },
   "workday/Workday": {
    "alerted": false,
    "fail_streak": 0,
    "last_error": null,
-   "last_ok": "2026-11-22T10:11:50.793932+00:00"
+   "last_ok": "2026-11-22T17:58:45.205247+00:00"
   }
  }
 }
