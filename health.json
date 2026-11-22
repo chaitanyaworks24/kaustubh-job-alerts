@@ -1,75 +1,75 @@
 {
  "day": {
   "date": "2026-11-22",
-  "runs": 3,
-  "sent": 68
+  "runs": 4,
+  "sent": 71
  },
  "sources": {
   "ashby": {
    "alerted": false,
    "fail_streak": 0,
    "last_error": null,
-   "last_ok": "2026-11-22T17:58:45.205247+00:00"
+   "last_ok": "2026-11-22T23:44:30.070187+00:00"
   },
   "greenhouse": {
    "alerted": false,
    "fail_streak": 0,
    "last_error": null,
-   "last_ok": "2026-11-22T17:58:45.205247+00:00"
+   "last_ok": "2026-11-22T23:44:30.070187+00:00"
   },
   "himalayas": {
    "alerted": false,
    "fail_streak": 0,
    "last_error": null,
-   "last_ok": "2026-11-22T17:58:45.205247+00:00"
+   "last_ok": "2026-11-22T23:44:30.070187+00:00"
   },
   "hirist": {
    "alerted": false,
    "fail_streak": 0,
    "last_error": null,
-   "last_ok": "2026-11-22T17:58:45.205247+00:00"
+   "last_ok": "2026-11-22T23:44:30.070187+00:00"
   },
   "iimjobs": {
    "alerted": false,
-   "fail_streak": 0,
-   "last_error": null,
+   "fail_streak": 1,
+   "last_error": "returned no postings (possibly blocked or changed)",
    "last_ok": "2026-11-22T17:58:45.205247+00:00"
   },
   "indeed": {
    "alerted": false,
    "fail_streak": 0,
    "last_error": null,
-   "last_ok": "2026-11-22T17:58:45.205247+00:00"
+   "last_ok": "2026-11-22T23:44:30.070187+00:00"
   },
   "lever": {
    "alerted": false,
    "fail_streak": 0,
    "last_error": null,
-   "last_ok": "2026-11-22T17:58:45.205247+00:00"
+   "last_ok": "2026-11-22T23:44:30.070187+00:00"
   },
   "linkedin": {
    "alerted": false,
    "fail_streak": 0,
    "last_error": null,
-   "last_ok": "2026-11-22T17:58:45.205247+00:00"
+   "last_ok": "2026-11-22T23:44:30.070187+00:00"
   },
   "naukri": {
    "alerted": false,
    "fail_streak": 0,
    "last_error": null,
-   "last_ok": "2026-11-22T17:58:45.205247+00:00"
+   "last_ok": "2026-11-22T23:44:30.070187+00:00"
   },
   "workday": {
    "alerted": false,
    "fail_streak": 0,
    "last_error": null,
-   "last_ok": "2026-11-22T17:58:45.205247+00:00"
+   "last_ok": "2026-11-22T23:44:30.070187+00:00"
   },
   "workday/Workday": {
    "alerted": false,
    "fail_streak": 0,
    "last_error": null,
-   "last_ok": "2026-11-22T17:58:45.205247+00:00"
+   "last_ok": "2026-11-22T23:44:30.070187+00:00"
   }
  }
 }
