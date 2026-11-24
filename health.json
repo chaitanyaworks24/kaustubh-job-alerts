@@ -1,75 +1,90 @@
 {
  "day": {
-  "date": "2026-11-23",
-  "runs": 2,
-  "sent": 100
+  "date": "2026-11-24",
+  "runs": 1,
+  "sent": 41
  },
  "sources": {
   "ashby": {
    "alerted": false,
    "fail_streak": 0,
    "last_error": null,
-   "last_ok": "2026-11-23T20:27:52.640852+00:00"
+   "last_ok": "2026-11-24T04:56:16.869357+00:00"
   },
   "greenhouse": {
    "alerted": false,
    "fail_streak": 0,
    "last_error": null,
-   "last_ok": "2026-11-23T20:27:52.640852+00:00"
+   "last_ok": "2026-11-24T04:56:16.869357+00:00"
   },
   "himalayas": {
    "alerted": false,
    "fail_streak": 0,
    "last_error": null,
-   "last_ok": "2026-11-23T20:27:52.640852+00:00"
+   "last_ok": "2026-11-24T04:56:16.869357+00:00"
+  },
+  "himalayas/category manager": {
+   "alerted": false,
+   "fail_streak": 1,
+   "last_error": "HTTP Error 429: Too Many Requests"
+  },
+  "himalayas/growth manager": {
+   "alerted": false,
+   "fail_streak": 1,
+   "last_error": "HTTP Error 429: Too Many Requests"
+  },
+  "himalayas/product manager": {
+   "alerted": false,
+   "fail_streak": 1,
+   "last_error": "HTTP Error 429: Too Many Requests"
   },
   "hirist": {
    "alerted": false,
    "fail_streak": 0,
    "last_error": null,
-   "last_ok": "2026-11-23T20:27:52.640852+00:00"
+   "last_ok": "2026-11-24T04:56:16.869357+00:00"
   },
   "iimjobs": {
    "alerted": false,
    "fail_streak": 0,
    "last_error": null,
-   "last_ok": "2026-11-23T20:27:52.640852+00:00"
+   "last_ok": "2026-11-24T04:56:16.869357+00:00"
   },
   "indeed": {
    "alerted": false,
    "fail_streak": 0,
    "last_error": null,
-   "last_ok": "2026-11-23T20:27:52.640852+00:00"
+   "last_ok": "2026-11-24T04:56:16.869357+00:00"
   },
   "lever": {
    "alerted": false,
    "fail_streak": 0,
    "last_error": null,
-   "last_ok": "2026-11-23T20:27:52.640852+00:00"
+   "last_ok": "2026-11-24T04:56:16.869357+00:00"
   },
   "linkedin": {
    "alerted": false,
    "fail_streak": 0,
    "last_error": null,
-   "last_ok": "2026-11-23T20:27:52.640852+00:00"
+   "last_ok": "2026-11-24T04:56:16.869357+00:00"
   },
   "naukri": {
    "alerted": false,
    "fail_streak": 0,
    "last_error": null,
-   "last_ok": "2026-11-23T20:27:52.640852+00:00"
+   "last_ok": "2026-11-24T04:56:16.869357+00:00"
   },
   "workday": {
    "alerted": false,
    "fail_streak": 0,
    "last_error": null,
-   "last_ok": "2026-11-23T20:27:52.640852+00:00"
+   "last_ok": "2026-11-24T04:56:16.869357+00:00"
   },
   "workday/Workday": {
    "alerted": false,
    "fail_streak": 0,
    "last_error": null,
-   "last_ok": "2026-11-23T20:27:52.640852+00:00"
+   "last_ok": "2026-11-24T04:56:16.869357+00:00"
   }
  }
 }
