@@ -1,178 +1,195 @@
 {
  "day": {
   "date": "2026-11-28",
-  "runs": 1,
-  "sent": 27
+  "runs": 2,
+  "sent": 43
  },
  "sources": {
   "ashby": {
    "alerted": false,
    "fail_streak": 0,
    "last_error": null,
-   "last_ok": "2026-11-28T08:16:34.808072+00:00"
+   "last_ok": "2026-11-28T17:05:25.637767+00:00"
   },
   "greenhouse": {
    "alerted": false,
    "fail_streak": 0,
    "last_error": null,
-   "last_ok": "2026-11-28T08:16:34.808072+00:00"
+   "last_ok": "2026-11-28T17:05:25.637767+00:00"
   },
   "himalayas": {
    "alerted": false,
-   "fail_streak": 1,
-   "last_error": "returned no postings (possibly blocked or changed)",
-   "last_ok": "2026-11-27T22:51:45.947121+00:00"
+   "fail_streak": 0,
+   "last_error": null,
+   "last_ok": "2026-11-28T17:05:25.637767+00:00"
   },
   "himalayas/business analyst": {
    "alerted": false,
-   "fail_streak": 1,
-   "last_error": "HTTP Error 429: Too Many Requests"
+   "fail_streak": 0,
+   "last_error": null,
+   "last_ok": "2026-11-28T17:05:25.637767+00:00"
   },
   "himalayas/category manager": {
    "alerted": false,
-   "fail_streak": 1,
-   "last_error": "HTTP Error 429: Too Many Requests",
-   "last_ok": "2026-11-27T22:51:45.947121+00:00"
+   "fail_streak": 0,
+   "last_error": null,
+   "last_ok": "2026-11-28T17:05:25.637767+00:00"
   },
   "himalayas/growth manager": {
    "alerted": false,
-   "fail_streak": 1,
-   "last_error": "HTTP Error 429: Too Many Requests",
-   "last_ok": "2026-11-27T22:51:45.947121+00:00"
+   "fail_streak": 0,
+   "last_error": null,
+   "last_ok": "2026-11-28T17:05:25.637767+00:00"
   },
   "himalayas/product analyst": {
    "alerted": false,
-   "fail_streak": 1,
-   "last_error": "HTTP Error 429: Too Many Requests"
+   "fail_streak": 0,
+   "last_error": null,
+   "last_ok": "2026-11-28T17:05:25.637767+00:00"
   },
   "himalayas/product manager": {
    "alerted": false,
-   "fail_streak": 1,
-   "last_error": "HTTP Error 429: Too Many Requests",
-   "last_ok": "2026-11-27T22:51:45.947121+00:00"
+   "fail_streak": 0,
+   "last_error": null,
+   "last_ok": "2026-11-28T17:05:25.637767+00:00"
   },
   "hirist": {
    "alerted": false,
    "fail_streak": 0,
    "last_error": null,
-   "last_ok": "2026-11-28T08:16:34.808072+00:00"
+   "last_ok": "2026-11-28T17:05:25.637767+00:00"
   },
   "iimjobs": {
    "alerted": false,
    "fail_streak": 0,
    "last_error": null,
-   "last_ok": "2026-11-28T08:16:34.808072+00:00"
+   "last_ok": "2026-11-28T17:05:25.637767+00:00"
   },
   "indeed": {
    "alerted": false,
    "fail_streak": 0,
    "last_error": null,
-   "last_ok": "2026-11-28T08:16:34.808072+00:00"
+   "last_ok": "2026-11-28T17:05:25.637767+00:00"
   },
   "lever": {
    "alerted": false,
    "fail_streak": 0,
    "last_error": null,
-   "last_ok": "2026-11-28T08:16:34.808072+00:00"
+   "last_ok": "2026-11-28T17:05:25.637767+00:00"
   },
   "linkedin": {
    "alerted": false,
-   "fail_streak": 0,
-   "last_error": null,
+   "fail_streak": 1,
+   "last_error": "returned no postings (possibly blocked or changed)",
    "last_ok": "2026-11-28T08:16:34.808072+00:00"
   },
   "naukri": {
    "alerted": false,
    "fail_streak": 0,
    "last_error": null,
-   "last_ok": "2026-11-28T08:16:34.808072+00:00"
+   "last_ok": "2026-11-28T17:05:25.637767+00:00"
   },
   "workday": {
    "alerted": false,
    "fail_streak": 0,
    "last_error": null,
-   "last_ok": "2026-11-28T08:16:34.808072+00:00"
+   "last_ok": "2026-11-28T17:05:25.637767+00:00"
   },
   "workday/Adobe": {
    "alerted": false,
-   "fail_streak": 1,
-   "last_error": "Expecting value: line 1 column 1 (char 0)"
+   "fail_streak": 0,
+   "last_error": null,
+   "last_ok": "2026-11-28T17:05:25.637767+00:00"
   },
   "workday/Barclays": {
    "alerted": false,
-   "fail_streak": 1,
-   "last_error": "Expecting value: line 1 column 1 (char 0)"
+   "fail_streak": 0,
+   "last_error": null,
+   "last_ok": "2026-11-28T17:05:25.637767+00:00"
   },
   "workday/Citi": {
    "alerted": false,
-   "fail_streak": 1,
-   "last_error": "Expecting value: line 1 column 1 (char 0)"
+   "fail_streak": 0,
+   "last_error": null,
+   "last_ok": "2026-11-28T17:05:25.637767+00:00"
   },
   "workday/Equifax": {
    "alerted": false,
-   "fail_streak": 1,
-   "last_error": "Expecting value: line 1 column 1 (char 0)"
+   "fail_streak": 0,
+   "last_error": null,
+   "last_ok": "2026-11-28T17:05:25.637767+00:00"
   },
   "workday/Gartner": {
    "alerted": false,
-   "fail_streak": 1,
-   "last_error": "Expecting value: line 1 column 1 (char 0)"
+   "fail_streak": 0,
+   "last_error": null,
+   "last_ok": "2026-11-28T17:05:25.637767+00:00"
   },
   "workday/Lowe's": {
    "alerted": false,
-   "fail_streak": 1,
-   "last_error": "Expecting value: line 1 column 1 (char 0)"
+   "fail_streak": 0,
+   "last_error": null,
+   "last_ok": "2026-11-28T17:05:25.637767+00:00"
   },
   "workday/Mastercard": {
    "alerted": false,
-   "fail_streak": 1,
-   "last_error": "Expecting value: line 1 column 1 (char 0)"
+   "fail_streak": 0,
+   "last_error": null,
+   "last_ok": "2026-11-28T17:05:25.637767+00:00"
   },
   "workday/NVIDIA": {
    "alerted": false,
-   "fail_streak": 1,
-   "last_error": "Expecting value: line 1 column 1 (char 0)"
+   "fail_streak": 0,
+   "last_error": null,
+   "last_ok": "2026-11-28T17:05:25.637767+00:00"
   },
   "workday/Nike": {
    "alerted": false,
-   "fail_streak": 1,
-   "last_error": "Expecting value: line 1 column 1 (char 0)"
+   "fail_streak": 0,
+   "last_error": null,
+   "last_ok": "2026-11-28T17:05:25.637767+00:00"
   },
   "workday/PayPal": {
    "alerted": false,
-   "fail_streak": 1,
-   "last_error": "Expecting value: line 1 column 1 (char 0)"
+   "fail_streak": 0,
+   "last_error": null,
+   "last_ok": "2026-11-28T17:05:25.637767+00:00"
   },
   "workday/Philips": {
    "alerted": false,
-   "fail_streak": 1,
-   "last_error": "Expecting value: line 1 column 1 (char 0)"
+   "fail_streak": 0,
+   "last_error": null,
+   "last_ok": "2026-11-28T17:05:25.637767+00:00"
   },
   "workday/Target": {
    "alerted": false,
-   "fail_streak": 1,
-   "last_error": "Expecting value: line 1 column 1 (char 0)"
+   "fail_streak": 0,
+   "last_error": null,
+   "last_ok": "2026-11-28T17:05:25.637767+00:00"
   },
   "workday/Thomson Reuters": {
    "alerted": false,
-   "fail_streak": 1,
-   "last_error": "Expecting value: line 1 column 1 (char 0)"
+   "fail_streak": 0,
+   "last_error": null,
+   "last_ok": "2026-11-28T17:05:25.637767+00:00"
   },
   "workday/Wolters Kluwer": {
    "alerted": false,
-   "fail_streak": 1,
-   "last_error": "Expecting value: line 1 column 1 (char 0)"
+   "fail_streak": 0,
+   "last_error": null,
+   "last_ok": "2026-11-28T17:05:25.637767+00:00"
   },
   "workday/Workday": {
    "alerted": false,
-   "fail_streak": 1,
-   "last_error": "Expecting value: line 1 column 1 (char 0)",
-   "last_ok": "2026-11-27T22:51:45.947121+00:00"
+   "fail_streak": 0,
+   "last_error": null,
+   "last_ok": "2026-11-28T17:05:25.637767+00:00"
   },
   "workday/Zendesk": {
    "alerted": false,
-   "fail_streak": 1,
-   "last_error": "Expecting value: line 1 column 1 (char 0)"
+   "fail_streak": 0,
+   "last_error": null,
+   "last_ok": "2026-11-28T17:05:25.637767+00:00"
   }
  }
 }
